@@ -1,4 +1,7 @@
 {
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
-  "postCreateCommand": "sh .devcontainer/install.sh"
+  "postCreateCommand": "sh .devcontainer/install.sh",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  }
 }
