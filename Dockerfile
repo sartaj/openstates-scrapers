@@ -60,3 +60,9 @@ ENV OPENSSL_CONF=/opt/openstates/openstates/openssl.cnf
 # Entrypoint enables proper support of Google Application Credentials as env variable
 COPY docker_entrypoint.sh /opt/openstates/entrypoint.sh
 ENTRYPOINT ["/bin/bash", "/opt/openstates/entrypoint.sh"]
+
+# Install Docker Compose
+RUN apk add --no-cache docker-compose
+
+# Start the Docker daemon (with entrypoint or CMD)
+CMD ["dockerd"]
